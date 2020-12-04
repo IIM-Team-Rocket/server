@@ -10,4 +10,4 @@ RUN yarn
 
 COPY . .
 
-CMD ["yarn", "run", "prod"]
+CMD ["yarn", "start"]

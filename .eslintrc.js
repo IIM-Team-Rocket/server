@@ -16,5 +16,8 @@ module.exports = {
     "@typescript-eslint"
   ],
   "rules": {
+    "semi": [1, "always"],
+    "quotes": [2, "single"],
+    "object-curly-spacing": [1, "always"]
   }
 };

@@ -1,11 +1,19 @@
-import express from 'express'
-import { ApolloServer, gql } from 'apollo-server-express'
-import * as Query from './schema/queries'
+import express from 'express';
 import { DocumentNode } from 'graphql';
+import { ApolloServer, gql } from 'apollo-server-express';
+import * as dotenv from 'dotenv';
+
+import * as Query from './schema/queries/_index';
 import Todo from './schema/types/Todo';
 
-const PORT = process.env.PORT || 3000
 const app = express();
+
+if (process.env.NODE_ENV !== 'production') {
+  console.log('🛠 Getting environment variables');
+  dotenv.config();
+}
+
+const PORT = process.env.PORT || 3000;
 
 const Main: DocumentNode = gql`
   type Query {
@@ -27,4 +35,4 @@ server.applyMiddleware({ app });
 
 app.listen({ port: PORT }, () =>
   console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`)
-)
+);
