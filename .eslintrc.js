@@ -18,6 +18,7 @@ module.exports = {
   "rules": {
     "semi": [1, "always"],
     "quotes": [2, "single"],
-    "object-curly-spacing": [1, "always"]
+    "object-curly-spacing": [1, "always"],
+    "eol-last": [2, "always"],
   }
 };

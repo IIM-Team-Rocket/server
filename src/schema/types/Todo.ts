@@ -1,4 +1,4 @@
-import { gql } from "apollo-server-express";
+import { gql } from 'apollo-server-express';
 
 export interface ITodo {
   userId: number;
@@ -14,6 +14,6 @@ const Todo = gql`
     title: String
     completed: Boolean
   }
-`
+`;
 
-export default Todo
+export default Todo;
